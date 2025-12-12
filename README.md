@@ -1,3 +1,21 @@
+# Projeto: Calculadora IMC
+
+Neste projeto será utilizado o React JS:
+
+Basicamente é um formulário contendo os campos:
+
+- Altura
+- Peso
+
+Além do citado formulário, teremos um gráfico contenddo um semi-circulo
+e uma seta informando as infromações sobre o IMC do usuário.
+
+## exemplo:
+
+![Calculadora, IMC](/src/img/calculadoraIMC.jpg)
+
+*OBS: as informações da calculadora serão calculadas por meio de funções.*
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -14,3 +32,9 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+
+
+
+
