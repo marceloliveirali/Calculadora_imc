@@ -1,0 +1,18 @@
+$app-orange: #FF7F50;
+$app-light-bg: #f7f7f7;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, $app-orange 20%, $app-light-bg 20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+}
