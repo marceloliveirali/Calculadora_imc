@@ -12,7 +12,7 @@ e uma seta informando as infromações sobre o IMC do usuário.
 
 ## exemplo:
 
-![Calculadora, IMC](/src/img/calculadoraIMC.jpg)
+![Calculadora, IMC](/src/img/calculadoraIMC.png)
 
 *OBS: as informações da calculadora serão calculadas por meio de funções.*
 
