@@ -97,13 +97,13 @@ function imcGaugeChart( { imc } )
                 <div className="gauge-legend">
                     {IMC_RANGES.map((range, index) => (
                         <div key={index} className="legend-item">
-            <span
-                className="legend-color"
-                style={{ backgroundColor: range.color }}
-            />
+                            <span
+                                className="legend-color"
+                                style={{ backgroundColor: range.color }}
+                            />
                             <span className="legend-label">
-              {range.label}
-            </span>
+                                {range.label}
+                            </span>
                         </div>
                     ))}
                 </div>
