@@ -1,35 +1,18 @@
-const CENTER_X = 100;
-const CENTER_Y = 100;
-const RADIUS = 90;
-
-function getCoords(angle, radius = RADIUS)
-{
-    const rad = (angle - 90) * Math.PI / 180;
+export const polarToCartesian = (centerX, centerY, radius, angleInDegrees) => {
+    const angleInRadians = ((angleInDegrees - 180) * Math.PI) / 180.0;
     return {
-        x: CENTER_X + radius * Math.cos(rad),
-        y: CENTER_Y + radius * Math.sin(rad),
+        x: centerX + radius * Math.cos(angleInRadians),
+        y: centerY + radius * Math.sin(angleInRadians),
     };
-}
+};
 
-function describeArc(startAngle, endAngle,radius, arcWidth)
-{
-    const innerRadius =radius - arcWidth / 2;
-    const outerRadius = radius - arcWidth / 2;
-
-    const startOuter = getCoords(startAngle, outerRadius)
-    const endOuter = getCoords(endAngle, outerRadius);
-    const startInner = getCoords(endAngle, innerRadius);
-    const endInner = getCoords(startAngle, innerRadius);
-
+export const describeArc = (x, y, radius, startAngle, endAngle) => {
+    const start = polarToCartesian(x, y, radius, endAngle);
+    const end = polarToCartesian(x, y, radius, startAngle);
     const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
-
     return [
-        `M ${startOuter.x} ${startOuter.y}`,
-        `A ${outerRadius} ${outerRadius} 0 ${largeArcFlag} 1 ${endOuter.x} ${endOuter.y}`,
-        `L ${startInner.x} ${startInner.y}`,
-        `A ${innerRadius} ${innerRadius} 0 ${largeArcFlag} 0 ${endInner.x} ${endInner.y}`,
-        `Z`
+        "M", start.x, start.y,
+        "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y
     ].join(" ");
-}
+};
 
-export {getCoords, describeArc};

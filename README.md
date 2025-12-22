@@ -1,4 +1,4 @@
-# Projeto: Calculadora IMC
+←# Projeto: Calculadora IMC
 
 Neste projeto será utilizado o React JS:
 

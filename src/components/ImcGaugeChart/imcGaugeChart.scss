@@ -1,0 +1,20 @@
+.gauge-wrapper {
+  width: 100%;
+  max-width: 280px;
+  margin: 20px auto;
+  position: relative;
+
+  svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+  }
+
+  // Adiciona os números (0, 18.5, 30, 35) ao redor do arco se desejar via CSS absoluto
+  // ou pode ser feito dentro do SVGUtils para maior precisão.
+}
+
+
+
+
+
