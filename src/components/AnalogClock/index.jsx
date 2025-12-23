@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './AnalogClock.scss';
 
-const AnalogClock = () => {
+function AnalogClock()
+{
     const [time, setTime] = useState(new Date());
 
     useEffect(() => {
@@ -44,14 +45,9 @@ const AnalogClock = () => {
             <div className="center-dot" />
         </div>
     );
-};
+}
 
 export default AnalogClock;
-
-
-
-
-
 
 
 

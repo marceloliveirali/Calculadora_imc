@@ -8,12 +8,13 @@ function ImcCalculator()
     const [altura, setAltura] = useState(180);
     const [peso, setPeso] = useState(70);
     const [genero, setGenero] = useState('homem');
-    const [idade, setIdade] = useState(30);
     const [imc, setImc] = useState(0);
 
     useEffect(() => {
         const alturaMetros = altura / 100;
-        if (alturaMetros > 0) {
+
+        if (alturaMetros > 0)
+        {
             const calculo = (peso / (alturaMetros * alturaMetros)).toFixed(1);
             setImc(parseFloat(calculo));
         }
@@ -64,16 +65,6 @@ function ImcCalculator()
                         className={genero === 'mulher' ? 'active' : ''}
                         onClick={() => setGenero('mulher')}
                     >♀ Mulher</button>
-                </div>
-                <div className="age-input">
-                    <label>Idade</label>
-                    <div className="input-btn">
-                        <input
-                            type="number"
-                            value={idade}
-                            onChange={e => setIdade(Number(e.target.value))}
-                        />
-                    </div>
                 </div>
             </div>
 

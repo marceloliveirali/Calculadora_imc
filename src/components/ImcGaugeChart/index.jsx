@@ -11,7 +11,8 @@ const ranges = [
     { min: 40, max: 50, color: '#6d0019', label: 'Obesidade III' },
 ];
 
-function getClassification(imc) {
+function getClassification(imc)
+{
     if (imc < 18.5) return 'Baixo peso';
     if (imc < 25) return 'Peso normal (eutrofia)';
     if (imc < 30) return 'Sobrepeso';
@@ -20,7 +21,8 @@ function getClassification(imc) {
     return 'Obesidade Grau III (Mórbida/Grave)';
 }
 
-function getClassificationColor(imc) {
+function getClassificationColor(imc)
+{
     if (imc < 18.5) return '#00adef';
     if (imc < 25) return '#8cc63f';
     if (imc < 30) return '#f7941e';
@@ -29,7 +31,8 @@ function getClassificationColor(imc) {
     return '#6d0019';
 }
 
-const ImcGaugeChart = ({ imc }) => {
+function ImcGaugeChart({ imc })
+{
     // Mapeia o IMC (0 a 40) para um ângulo (0 a 180 graus)
     const angle = Math.min(Math.max((imc / 40) * 180, 0), 180);
 
