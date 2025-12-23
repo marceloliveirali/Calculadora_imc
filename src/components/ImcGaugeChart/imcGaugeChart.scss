@@ -1,17 +1,54 @@
 .gauge-wrapper {
   width: 100%;
-  max-width: 280px;
+  max-width: 340px;
   margin: 20px auto;
   position: relative;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  padding: 24px 16px 32px 16px;
+  text-align: center;
 
   svg {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    display: block;
+    margin: 0 auto 8px auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.08));
+    background: none;
   }
 
-  // Adiciona os números (0, 18.5, 30, 35) ao redor do arco se desejar via CSS absoluto
-  // ou pode ser feito dentro do SVGUtils para maior precisão.
+  .imc-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+
+  .imc-classification {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .imc-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 18px;
+    margin-top: 10px;
+    font-size: 0.95rem;
+
+    .legend-color {
+      display: inline-block;
+      width: 16px;
+      height: 10px;
+      border-radius: 3px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+  }
 }
 
 

@@ -1,19 +1,22 @@
 .analog-clock {
   width: 64px;
   height: 64px;
-  border: 3px solid #333;
+  border: 2px solid #222; // Borda mais fina e preta
   border-radius: 50%;
+  background: #fff; // Fundo branco
   position: relative;
+  box-shadow: 0 1px 2px #0001;
 }
 
 .mark {
   position: absolute;
   width: 2px;
-  height: 6px;
-  background: #333;
-  top: 2px;
+  height: 8px;
+  background: #222; // Preto
+  top: 6px;
   left: 50%;
-  transform-origin: center 30px;
+  transform-origin: center 26px;
+  border-radius: 1px;
 }
 
 .hand {
@@ -22,34 +25,41 @@
   left: 50%;
   transform-origin: bottom;
   transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .hour {
-  width: 4px;
+  width: 3px;
   height: 16px;
-  background: #333;
+  background: #222; // Preto
+  z-index: 2;
 }
 
 .minute {
-  width: 3px;
+  width: 2px;
   height: 22px;
-  background: #333;
+  background: #222; // Preto
+  z-index: 3;
 }
 
 .second {
-  width: 2px;
+  width: 1.5px;
   height: 26px;
-  background: #ff5c5c;
+  background: #ff5c5c; // Vermelho
+  z-index: 4;
 }
 
 .center-dot {
-  width: 6px;
-  height: 6px;
-  background: #ff5c5c;
+  width: 10px;
+  height: 10px;
+  background: #ff5c5c; // Vermelho
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px #0002;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
